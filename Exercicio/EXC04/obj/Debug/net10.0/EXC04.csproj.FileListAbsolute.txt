@@ -1,0 +1,15 @@
+C:\Users\42501827899\Desktop\BeckEnd3Sem\Exercicio\EXC04\obj\Debug\net10.0\EXC04.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\42501827899\Desktop\BeckEnd3Sem\Exercicio\EXC04\obj\Debug\net10.0\EXC04.AssemblyInfoInputs.cache
+C:\Users\42501827899\Desktop\BeckEnd3Sem\Exercicio\EXC04\obj\Debug\net10.0\EXC04.AssemblyInfo.cs
+C:\Users\42501827899\Desktop\BeckEnd3Sem\Exercicio\EXC04\obj\Debug\net10.0\EXC04.csproj.CoreCompileInputs.cache
+C:\Users\42501827899\Desktop\BeckEnd3Sem\Exercicio\EXC04\obj\Debug\net10.0\EXC04.sourcelink.json
+C:\Users\42501827899\Desktop\BeckEnd3Sem\Exercicio\EXC04\bin\Debug\net10.0\EXC04.exe
+C:\Users\42501827899\Desktop\BeckEnd3Sem\Exercicio\EXC04\bin\Debug\net10.0\EXC04.deps.json
+C:\Users\42501827899\Desktop\BeckEnd3Sem\Exercicio\EXC04\bin\Debug\net10.0\EXC04.runtimeconfig.json
+C:\Users\42501827899\Desktop\BeckEnd3Sem\Exercicio\EXC04\bin\Debug\net10.0\EXC04.dll
+C:\Users\42501827899\Desktop\BeckEnd3Sem\Exercicio\EXC04\bin\Debug\net10.0\EXC04.pdb
+C:\Users\42501827899\Desktop\BeckEnd3Sem\Exercicio\EXC04\obj\Debug\net10.0\EXC04.dll
+C:\Users\42501827899\Desktop\BeckEnd3Sem\Exercicio\EXC04\obj\Debug\net10.0\refint\EXC04.dll
+C:\Users\42501827899\Desktop\BeckEnd3Sem\Exercicio\EXC04\obj\Debug\net10.0\EXC04.pdb
+C:\Users\42501827899\Desktop\BeckEnd3Sem\Exercicio\EXC04\obj\Debug\net10.0\EXC04.genruntimeconfig.cache
+C:\Users\42501827899\Desktop\BeckEnd3Sem\Exercicio\EXC04\obj\Debug\net10.0\ref\EXC04.dll
