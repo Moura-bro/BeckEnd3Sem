@@ -20,4 +20,9 @@ public partial class TipoUsuario
 
     [JsonIgnore]
     public virtual ICollection<Usuario> Usuarios { get; set; } = new List<Usuario>();
+
+    internal void Remove(TipoUsuario tipoUsuarioBuscado)
+    {
+        throw new NotImplementedException();
+    }
 }
