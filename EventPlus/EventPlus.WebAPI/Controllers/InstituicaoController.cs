@@ -12,13 +12,24 @@ namespace EventPlus.WebAPI.Controllers;
 [ApiController]
 public class InstituicaoController : ControllerBase
 {
-    private IInstitucaoRepository _instituicaoRepository;
+    private readonly IInstitucaoRepository _instituicaoRepository;
 
     public InstituicaoController(IInstitucaoRepository instituicaoRepository)
     {
         _instituicaoRepository = instituicaoRepository;
     }
 
+
+
+
+
+
+
+
+    /// <summary>
+    /// Endpoint da Api que faz a chamda para o metodo de listar os tipos de Instituicao
+    /// </summary>
+    /// <returns>Status code 200 e a lista de tipos Instituicao</returns>
     [HttpGet]
     public IActionResult Listar()
     {
@@ -36,6 +47,16 @@ public class InstituicaoController : ControllerBase
 
 
 
+
+
+
+
+
+    /// <summary>
+    ///  Endpoit da Api que faz a chamada para o metodo de buscar um tipo Instituicao por id
+    /// </summary>
+    /// <param name="Id">Id do Tipo Instituicao buscado</param>
+    /// <returns>Code 200 e o tipo Instituicao buscado</returns>
     [HttpGet("{id}")]
     public IActionResult BuscarPorId(Guid Id)
     {
@@ -50,13 +71,29 @@ public class InstituicaoController : ControllerBase
     }
 
 
+
+
+
+
+
+
+
+
+    /// <summary>
+    /// Endpoit da API que faz a chamada para o metodo  de cadastro. de um tipo Instituicao
+    /// </summary>
+    /// <param name="instituicao">Tipo de Instituicao a ser cadastrado</param>
+    /// <returns>Status code 201 e o tipo Institucao a ser cadastrado </returns>
+    [HttpPost]
     public IActionResult Cadastrar(InstituicaoDTO instituicao)
     {
         try
         {
             var novoInstituicao = new Instituicao
             {
-                Cnpj = instituicao.Cnpj!
+                Cnpj = instituicao.Cnpj!,
+                Endereco = instituicao.Endereco!,
+                NomeFantasia = instituicao.NomeFantasia!
             };
 
             _instituicaoRepository.Cadastrar(novoInstituicao);
@@ -70,6 +107,20 @@ public class InstituicaoController : ControllerBase
 
 
 
+
+
+
+
+
+
+
+
+    /// <summary>
+    /// Endpoint da API que faz chmada para o metodo atualizar 
+    /// </summary>
+    /// <param name="id">id  do tipo Instituicao a ser atualizado</param>
+    /// <param name="instituicao">Tipo Instituicao com os dados</param>
+    /// <returns>Status code 204 e o tipo  Instituicao atualizado</returns>
     [HttpPut("{id}")]
     public IActionResult Atualizar(Guid id, InstituicaoDTO instituicao)
     {
@@ -77,7 +128,9 @@ public class InstituicaoController : ControllerBase
         {
             var InstituicaoAtualizada = new Instituicao
             {
-                Cnpj = instituicao.Cnpj!
+                Cnpj = instituicao.Cnpj!,
+                Endereco = instituicao.Endereco!,
+                NomeFantasia = instituicao.NomeFantasia!
             };
 
 

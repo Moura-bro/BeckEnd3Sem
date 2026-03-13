@@ -28,4 +28,5 @@ public partial class Instituicao
 
     [JsonIgnore]
     public virtual ICollection<Evento> Eventos { get; set; } = new List<Evento>();
+  
 }

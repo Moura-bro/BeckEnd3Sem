@@ -10,7 +10,7 @@ namespace EventPlus.WebAPI.Controllers;
 [ApiController]
 public class TipoEventoController : ControllerBase
 {
-    private ITipoEventoRepository _tipoEventoRepository;
+    private readonly ITipoEventoRepository _tipoEventoRepository;
 
     // Injecao de dependencia : Recebe o repositorio pelo construtor
     public TipoEventoController(ITipoEventoRepository tipoEventoRepository)

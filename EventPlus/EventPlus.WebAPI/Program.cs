@@ -1,7 +1,9 @@
 using EventPlus.WebAPI.BdContextEvent;
 using EventPlus.WebAPI.Interfaces;
+using EventPlus.WebAPI.Repositories;
 using EventPlus.WebAPI.Repositoriesp;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +14,38 @@ builder.Services.AddDbContext<EventContext>(options =>
 
 //2. Registrar os repositórios (Injesao de Dependecia)
 builder.Services.AddScoped<ITipoEventoRepository, TipoEventoRepository>();
+builder.Services.AddScoped<ITipoUsuarioRepository, TipoUsuarioRepository>();
+builder.Services.AddScoped<IInstitucaoRepository, InstitucaoRepository>();
+builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+
+
+//Adicionar servicos de jwt Bearrer(forma de autenticação)
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = "JwtBearrer";
+    options.DefaultChallengeScheme = "JwtBearrer";
+
+})
+    .AddJwtBearer("JwtBearrer", options =>
+    {
+        options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+        {
+            //valida quem esta solicitando o token
+            ValidateIssuer = true,
+            //valida quem esta recebendo o token
+            ValidateAudience = true,
+            //valida o tempo de expiração do token
+            ValidateLifetime = true,
+            //Forma de Criptografia e valida  a chave de autentificacao
+            IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("eventplus-chave-autenticacao-webapi-dev")),
+            //Valida o tempo de expiracao do tonken
+            ClockSkew = TimeSpan.FromMinutes(5),
+            //nome do issuer (de onde esta vindo)
+            ValidIssuer = "api_eventplus",
+            //nome do audience(para onde esta indo)
+            ValidAudience = "api_eventplus"
+        };
+    });
 
 
 //Adiciona o Swagger
@@ -56,6 +90,18 @@ options.AddSecurityRequirement(document => new  OpenApiSecurityRequirement
 
 });
 
+
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy", builder =>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
+
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
@@ -71,14 +117,24 @@ if (app.Environment.IsDevelopment())
 
         app.UseSwaggerUI(options =>
         {
-            options.SwaggerEndpoint("/swagger/v1/swagger.json", "V1");
+            options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
             options.RoutePrefix = string.Empty; // Define a raiz para acessar o Swagger UI
         });
 }
 
-app.UseHttpsRedirection();
+
+app.UseCors("CorsPolicy");
+
+app.UseStaticFiles();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
+
+//------------Sei la
+app.UseHttpsRedirection();
+
+// Adiciona o mapeamentos de Controllers
 
 app.MapControllers();
 

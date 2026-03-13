@@ -26,7 +26,6 @@ C:\Users\42501827899\Desktop\BeckEnd3Sem\EventPlus\EventPlus.WebAPI\obj\Debug\ne
 C:\Users\42501827899\Desktop\BeckEnd3Sem\EventPlus\EventPlus.WebAPI\obj\Debug\net10.0\staticwebassets.development.json
 C:\Users\42501827899\Desktop\BeckEnd3Sem\EventPlus\EventPlus.WebAPI\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 C:\Users\42501827899\Desktop\BeckEnd3Sem\EventPlus\EventPlus.WebAPI\obj\Debug\net10.0\swae.build.ex.cache
-C:\Users\42501827899\Desktop\BeckEnd3Sem\EventPlus\EventPlus.WebAPI\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 C:\Users\42501827899\Desktop\BeckEnd3Sem\EventPlus\EventPlus.WebAPI\obj\Debug\net10.0\EventPlu.DAF08F38.Up2Date
 C:\Users\42501827899\Desktop\BeckEnd3Sem\EventPlus\EventPlus.WebAPI\obj\Debug\net10.0\EventPlus.WebAPI.dll
 C:\Users\42501827899\Desktop\BeckEnd3Sem\EventPlus\EventPlus.WebAPI\obj\Debug\net10.0\refint\EventPlus.WebAPI.dll
@@ -162,3 +161,5 @@ C:\Users\42501827899\Desktop\BeckEnd3Sem\EventPlus\EventPlus.WebAPI\bin\Debug\ne
 C:\Users\42501827899\Desktop\BeckEnd3Sem\EventPlus\EventPlus.WebAPI\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\42501827899\Desktop\BeckEnd3Sem\EventPlus\EventPlus.WebAPI\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\42501827899\Desktop\BeckEnd3Sem\EventPlus\EventPlus.WebAPI\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\42501827899\Desktop\BeckEnd3Sem\EventPlus\EventPlus.WebAPI\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+C:\Users\42501827899\Desktop\BeckEnd3Sem\EventPlus\EventPlus.WebAPI\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
