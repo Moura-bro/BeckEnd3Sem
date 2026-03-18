@@ -1,5 +1,6 @@
 ﻿using EventPlus.WebAPI.DTO;
 using EventPlus.WebAPI.Interfaces;
+using EventPlus.WebAPI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -62,7 +63,7 @@ public class UsuarioController : ControllerBase
 
 
             _usuarioRepository.Cadastrar(novoUsuario);
-            return StatusCode(201, novoUsuario);
+            return StatusCode(201);
         }
         catch (Exception ex)
         {

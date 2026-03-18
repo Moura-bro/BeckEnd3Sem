@@ -84,3 +84,5 @@ CREATE TABLE ComentarioEvento(
   FOREIGN KEY REFERENCES Usuario(IdUsuario)
 );
 GO
+
+SELECT * FROM Evento
