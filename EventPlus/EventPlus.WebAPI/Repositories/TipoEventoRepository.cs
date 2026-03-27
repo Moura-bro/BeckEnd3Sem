@@ -13,6 +13,10 @@ public class TipoEventoRepository : ITipoEventoRepository
     {
         _context = context;
     }
+
+
+
+//---------------------------Atualizar----------------------------------------------------------
     /// <summary>
     /// Atualiza um tipo de evento usando o rastreamento automatiaco
     /// </summary>
@@ -32,6 +36,7 @@ public class TipoEventoRepository : ITipoEventoRepository
     }
 
 
+//-------------------------------BuscarPorId------------------------------------------------------
     /// <summary>
     /// Busca um tipo de Evento por Id
     /// </summary>
@@ -42,6 +47,9 @@ public class TipoEventoRepository : ITipoEventoRepository
        return _context.TipoEventos.Find(id);
     }
 
+
+//---------------------------------cadastrar----------------------------------------------------
+
     /// <summary>
     /// Cadastra um novo tipo de evento
     /// </summary>
@@ -51,6 +59,9 @@ public class TipoEventoRepository : ITipoEventoRepository
         _context.TipoEventos.Add(tipoEvento);
         _context.SaveChanges();
     }
+
+//-----------------------------------Deletar--------------------------------------------------
+
 
     /// <summary>
     /// Deleta um tipo de evento
@@ -67,6 +78,8 @@ public class TipoEventoRepository : ITipoEventoRepository
         }
     }
 
+
+    //--------------------------------Listar-----------------------------------------------------
 
     /// <summary>
     /// Busca a lista de eventos cadastrados 

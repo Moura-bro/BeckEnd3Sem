@@ -110,7 +110,15 @@ public class PresencaController : ControllerBase
         }
     }
 
-    //---------------------------------------------------------------------------------------
+    //---------------------------------Atualizar------------------------------------------------------
+
+
+    /// <summary>
+    /// Endpoit da API para atualizar a presença de um usuario, sem filtro de usuario
+    /// </summary>
+    /// <param name="id"> </param>
+    /// <param name="presenca"></param>
+    /// <returns>Status code 204 e Presenca atualizada </returns>
     [HttpPut("{id}")]
     public IActionResult Atualizar(Guid id, PresencaDTO presenca)
     {
@@ -132,5 +140,25 @@ public class PresencaController : ControllerBase
         }
      }
 
+//-------------------------------Deletar-------------------------------------------------------------
 
+
+    /// <summary>
+    /// Endpoit da API para deletar a presença de um usuario
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns>Status code 204 e Presenca deletada </returns>
+    [HttpDelete("{id}")]
+    public IActionResult Deletar(Guid id)
+    {
+        try
+        {
+            _presencaRepository.Deletar(id);
+            return StatusCode(204);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
 }

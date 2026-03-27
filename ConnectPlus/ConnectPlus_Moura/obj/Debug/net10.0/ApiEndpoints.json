@@ -1,0 +1,190 @@
+[
+  {
+    "ContainingType": "ConnectPlus_Moura.Controllers.ContatoController",
+    "Method": "Listar",
+    "RelativePath": "api/Contato",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConnectPlus_Moura.Controllers.ContatoController",
+    "Method": "Cadastrar",
+    "RelativePath": "api/Contato",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Nome",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FormaContato",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Imagens",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdTipoContato",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConnectPlus_Moura.Controllers.ContatoController",
+    "Method": "BuscarPorId",
+    "RelativePath": "api/Contato/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConnectPlus_Moura.Controllers.ContatoController",
+    "Method": "Atualizar",
+    "RelativePath": "api/Contato/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "Nome",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FormaContato",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Imagens",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdTipoContato",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConnectPlus_Moura.Controllers.ContatoController",
+    "Method": "Deletar",
+    "RelativePath": "api/Contato/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConnectPlus_Moura.Controllers.TipoContatoController",
+    "Method": "Listar",
+    "RelativePath": "api/TipoContato",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConnectPlus_Moura.Controllers.TipoContatoController",
+    "Method": "Cadastrar",
+    "RelativePath": "api/TipoContato",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipoContato",
+        "Type": "ConnectPlus_Moura.DTO.TipoContatoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConnectPlus_Moura.Controllers.TipoContatoController",
+    "Method": "BuscarPorId",
+    "RelativePath": "api/TipoContato/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConnectPlus_Moura.Controllers.TipoContatoController",
+    "Method": "Atualizar",
+    "RelativePath": "api/TipoContato/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "tipoContato",
+        "Type": "ConnectPlus_Moura.DTO.TipoContatoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConnectPlus_Moura.Controllers.TipoContatoController",
+    "Method": "Deletar",
+    "RelativePath": "api/TipoContato/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

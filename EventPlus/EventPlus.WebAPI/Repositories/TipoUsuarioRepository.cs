@@ -14,7 +14,7 @@ namespace EventPlus.WebAPI.Repositories
         }
 
 
-
+//--------------------------------------------------------------------------------
         public void Atualizar(Guid id, TipoUsuario tipoUsuario)
         {
             var tipoUsuarioBuscado = _context.TipoUsuarios.Find(id);
@@ -28,18 +28,25 @@ namespace EventPlus.WebAPI.Repositories
         }
 
 
+//--------------------------------------------------------------------------------
+
 
         public TipoUsuario BuscarPorId(Guid id)
         {
             return _context.TipoUsuarios.Find(id);
         }
 
+
+
+//--------------------------------------------------------------------------------
         public void Cadastrar(TipoUsuario tipoUsuario)
         {
            _context.TipoUsuarios.Add(tipoUsuario);
             _context.SaveChanges();
         }
 
+        
+//--------------------------------------------------------------------------------
         public void Deletar(Guid id)
         {
             var tipoUsuarioBuscado = _context.TipoUsuarios.Find(id);
@@ -51,6 +58,9 @@ namespace EventPlus.WebAPI.Repositories
                 _context.SaveChanges();
             }
         }
+
+
+//--------------------------------------------------------------------------------
 
         public List<TipoUsuario> Listar()
         {

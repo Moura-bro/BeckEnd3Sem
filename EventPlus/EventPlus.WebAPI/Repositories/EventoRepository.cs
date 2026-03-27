@@ -14,7 +14,8 @@ public class EventoRepository : IEventoRepository
         _context = context; 
     }
 
-    
+
+ //--------------------------------Atualizar----------------------------------------------------------------  
 
 
     public void Atualizar(Guid id, Evento evento)
@@ -29,17 +30,26 @@ public class EventoRepository : IEventoRepository
         }
     }
 
+
+
+    //----------------------------------BuscarPorId--------------------------------------------------------------
     public Evento BuscarPorId(Guid id)
     {
         return _context.Eventos.Find(id)!;
     }
 
+
+
+    //----------------------------------------Cadastrar--------------------------------------------------------
     public void Cadastrar(Evento evento)
     {
        _context.Eventos.Add(evento);
         _context.SaveChanges();
     }
 
+
+
+    //---------------------------------Deletar---------------------------------------------------------------
     public void Deletar(Guid id)
     {
        var eventoBuscado = _context.Eventos.Find(id);
@@ -50,15 +60,14 @@ public class EventoRepository : IEventoRepository
         }
     }
 
+
+//---------------------------------Listar---------------------------------------------------------------
     public List<Evento> Listar()
     {
         return _context.Eventos.OrderBy(Eventos => Eventos.Nome).ToList();
     }
 
-
-
-
-
+//-----------------------------------ListarPorId-------------------------------------------------------------
 
 
     /// <summary>
@@ -76,10 +85,7 @@ public class EventoRepository : IEventoRepository
 
     }
 
-
-
-
-
+//------------------------------------ListarProximos-------------------------------------------------------------
 
 
 

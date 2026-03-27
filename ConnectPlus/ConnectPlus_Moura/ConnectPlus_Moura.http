@@ -1,0 +1,6 @@
+@ConnectPlus_Moura_HostAddress = http://localhost:5115
+
+GET {{ConnectPlus_Moura_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

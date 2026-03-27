@@ -86,3 +86,7 @@ CREATE TABLE ComentarioEvento(
 GO
 
 SELECT * FROM Evento
+
+SELECT * FROM Usuario
+
+SELECT * FROM ComentarioEvento

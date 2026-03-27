@@ -1,8 +1,10 @@
+using Azure.AI.ContentSafety;
 using EventPlus.WebAPI.BdContextEvent;
 using EventPlus.WebAPI.Interfaces;
 using EventPlus.WebAPI.Repositories;
 using EventPlus.WebAPI.Repositoriesp;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Azure;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
 
@@ -18,6 +20,19 @@ builder.Services.AddScoped<ITipoUsuarioRepository, TipoUsuarioRepository>();
 builder.Services.AddScoped<IInstitucaoRepository, InstitucaoRepository>();
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<IEventoRepository, EventoRepository>();
+builder.Services.AddScoped<IPresencaRepository, PresencaRepository >();
+builder.Services.AddScoped<IComentarioEventoRepository, ComentarioEventoRepository>();
+
+//---------------------
+//Configuracao do Azure Content safety
+
+var endpoit = "https://moderatorservice-rafael.cognitiveservices.azure.com/";
+var apiKey = "";
+
+var client = new ContentSafetyClient(new Uri(endpoit), new Azure.AzureKeyCredential(apiKey));
+builder.Services.AddSingleton(client);
+
+
 
 
 //Adicionar servicos de jwt Bearrer(forma de autenticação)
